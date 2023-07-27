@@ -288,6 +288,7 @@ RE.insertLink = function(url, text, title) {
         var el = document.createElement("a");
         el.setAttribute("href", url);
         el.setAttribute("title", title);
+        el.setAttribute("target", "_blank");
 
         var range = sel.getRangeAt(0).cloneRange();
         range.surroundContents(el);
