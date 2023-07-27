@@ -283,7 +283,7 @@ RE.insertLink = function(url, text, title) {
     RE.restorerange();
     var sel = document.getSelection();
     if (sel.toString().length == 0) {
-        document.execCommand("insertHTML",false,"<a href='"+url+"' title='"+title+"'>"+text+"</a>");
+        document.execCommand("insertHTML",false,"<a href='"+url+"' title='"+title+"' target='_blank'>"+text+"</a>");
     } else if (sel.rangeCount) {
         var el = document.createElement("a");
         el.setAttribute("href", url);
